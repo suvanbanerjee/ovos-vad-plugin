@@ -8,7 +8,7 @@ BASEDIR = os.path.abspath(os.path.dirname(__file__))
 def get_version():
     """ Find the version of the package"""
     version = None
-    version_file = os.path.join(BASEDIR, 'ovos_vad_plugin_noise', 'version.py')
+    version_file = os.path.join(BASEDIR, 'ovos_vad_plugin_energy', 'version.py')
     major, minor, build, alpha = (None, None, None, None)
     with open(version_file) as f:
         for line in f:
@@ -49,17 +49,17 @@ def required(requirements_file):
                 if pkg.strip() and not pkg.startswith("#")]
 
 
-PLUGIN_ENTRY_POINT = 'ovos-vad-plugin-noise = ' \
-                     'ovos_vad_plugin_noise:NoiseVAD'
+PLUGIN_ENTRY_POINT = 'ovos-vad-plugin-energy = ' \
+                    'ovos_vad_plugin_energy:EnergyVAD'
 setup(
-    name='ovos-vad-plugin-noise',
+    name='ovos-vad-plugin-energy',
     version=get_version(),
-    description='noise ratio VAD plugin for OpenVoiceOS',
-    url='https://github.com/OpenVoiceOS/ovos-vad-plugin-noise',
-    author='JarbasAi',
-    author_email='jarbasai@mailfence.com',
-    license='Apache-2.0',
-    packages=['ovos_vad_plugin_noise'],
+    description='Lorem Ipsum', #TODO
+    url='https://github.com/suvanbanerjee/ovos-vad-plugin-energy',
+    author='suvanbanerjee',
+    author_email='banerjeesuvan@gmail.com',
+    license='MIT',
+    packages=['ovos_vad_plugin_energy'],
     install_requires=required("requirements.txt"),
     zip_safe=True,
     classifiers=[

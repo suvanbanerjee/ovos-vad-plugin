@@ -1,1 +1,1 @@
-# ovos-vad-plugin
+# ovos-vad-plugin-energy
